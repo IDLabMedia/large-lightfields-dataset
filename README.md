@@ -32,13 +32,13 @@ We present two scenes: _barbershop_ and _garden_.
 
 ### Barbershop
 
-![Barbershop Panorama](barbershop_pano.webp)
+![Barbershop Panorama](./barbershop_pano.webp)
 
 This scene is taken from the Blender website, under the "demo files" section. It is licensed CC-BY.
 
 ### Garden
 
-![Garden Panorama](garden_pano.webp)
+![Garden Panorama](./garden_pano.webp)
 
 This scene is made in-house by IDLab-MEDIA. It is licensed CC-BY.
 
@@ -50,6 +50,5 @@ tool (written in C++) to generate reprojected images with other lens types, as
 most established light field research uses rectilinear lenses.
 
 ### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/generate_NERF_transforms.py)
-We provide a Python script that produces the required NeRF configuration file
-to test our scenes in NeRF using
+We provide a Python script that produces the required NeRF configuration filgenerate_NERF_transformsto test our scenes in NeRF using
 [instant-ngp](https://github.com/NVlabs/instant-ngp).
