@@ -49,7 +49,7 @@ As the images are rendered using equisolid fish-eye lenses, we also supply a
 tool (written in C++) to generate reprojected images with other lens types, as
 most established light field research uses rectilinear lenses.
 
-### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/nerf-generator.py)
+### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/generate_NERF_transforms.py)
 We provide a Python script that produces the required NeRF configuration file
 to test our scenes in NeRF using
 [instant-ngp](https://github.com/NVlabs/instant-ngp).
