@@ -55,9 +55,13 @@ test our scenes in NeRF using [instant-ngp](https://github.com/NVlabs/instant-ng
 
 Example on the spherical rendering configuration of barbershop and garden,
 after reprojecting it using the `lens-reproject` tool (as instant-ngp only
-support rectilinear images):  
-![NeRF Barbershop](./nerf_barbershop_spherical.gif) ![NeRF Garden](./nerf_garden.gif)
+support rectilinear images):
+
+![NeRF Barbershop](./nerf_barbershop_spherical.gif)
+![NeRF Garden](./nerf_garden.gif)
 
 
 ### [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon)
 The Blender addon we developed in-house to produce the dataset images is also made available publicly.
+
+![Addon](https://github.com/IDLabMedia/blender-lightfield-addon/raw/readme/docs/settings.gif)
