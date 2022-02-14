@@ -67,7 +67,6 @@ support rectilinear images):
 ### [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon)
 The Blender addon we developed in-house to produce the dataset images is also made available publicly.
 
-<img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser.PNG"  height="210"/>
-<img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser2.png"  height="210"/>
+<img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser.PNG"  height="210"/> <img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser2.png"  height="210"/>
 
 ![Addon GIF](https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/settings.gif)
