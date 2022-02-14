@@ -1,4 +1,4 @@
-# Large Lightfields Dataset
+# [Large Lightfields Dataset](https://idlabmedia.github.io/large-lightfield-dataset)
 
 We present a dataset of light field images with the aim for providing a useful
 dataset for immersive VR experiences. 
@@ -49,7 +49,7 @@ As the images are rendered using equisolid fish-eye lenses, we also supply a
 tool (written in C++) to generate reprojected images with other lens types, as
 most established light field research uses rectilinear lenses.
 
-### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/generate_NERF_transforms.py)
+### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/blob/main/generate_NERF_transforms.py)
 We provide a Python script that produces the required NeRF configuration filgenerate_NERF_transformsto test our scenes in NeRF using
 [instant-ngp](https://github.com/NVlabs/instant-ngp).
 
