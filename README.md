@@ -34,13 +34,16 @@ We present two scenes: _barbershop_ and _garden_.
 
 ![Barbershop Panorama](./barbershop_pano.webp)
 
-This scene is taken from the Blender website, under the "demo files" section. It is licensed CC-BY.
+This scene is taken from [the Blender website, under the "demo files"
+section](https://www.blender.org/download/demo-files/#cycles). It is licensed
+CC-BY.
 
 ### Garden
 
 ![Garden Panorama](./garden_pano.webp)
 
-This scene is made in-house by IDLab-MEDIA. It is licensed CC-BY.
+This scene is made in-house by IDLab-MEDIA. It is licensed [CC-BY
+4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Tools
 
