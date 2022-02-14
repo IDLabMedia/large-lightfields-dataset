@@ -53,7 +53,9 @@ most established light field research uses rectilinear lenses.
 We provide a Python script that produces the required NeRF configuration to
 test our scenes in NeRF using [instant-ngp](https://github.com/NVlabs/instant-ngp).
 
-Example on the spherical rendering configuration of barbershop, after reprojecting it using the `lens-reproject` tool:  
+Example on the spherical rendering configuration of barbershop and garden,
+after reprojecting it using the `lens-reproject` tool (as instant-ngp only
+support rectilinear images):  
 ![NeRF Barbershop](./nerf_barbershop_spherical.gif) ![NeRF Garden](./nerf_garden.gif)
 
 
