@@ -52,3 +52,6 @@ most established light field research uses rectilinear lenses.
 ### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/generate_NERF_transforms.py)
 We provide a Python script that produces the required NeRF configuration filgenerate_NERF_transformsto test our scenes in NeRF using
 [instant-ngp](https://github.com/NVlabs/instant-ngp).
+
+### [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon)
+The Blender addon we developed in-house to produce the dataset images is also made available publicly.

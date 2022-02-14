@@ -1,6 +1,0 @@
-[submodule "image_lens_reproject"]
-	path = image_lens_reproject
-	url = https://github.com/IDLabMedia/image-lens-reproject.git
-[submodule "blender_lightfield_addon"]
-	path = blender_lightfield_addon
-	url = https://github.com/IDLabMedia/blender-lightfield-addon.git
