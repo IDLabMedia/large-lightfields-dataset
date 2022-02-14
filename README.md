@@ -50,8 +50,12 @@ tool (written in C++) to generate reprojected images with other lens types, as
 most established light field research uses rectilinear lenses.
 
 ### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/blob/main/generate_NERF_transforms.py)
-We provide a Python script that produces the required NeRF configuration filgenerate_NERF_transformsto test our scenes in NeRF using
-[instant-ngp](https://github.com/NVlabs/instant-ngp).
+We provide a Python script that produces the required NeRF configuration to
+test our scenes in NeRF using [instant-ngp](https://github.com/NVlabs/instant-ngp).
+
+Example on the spherical rendering configuration of barbershop, after reprojecting it using the `lens-reproject` tool:  
+![NeRF Barbershop](./nerf_barbershop_spherical.gif) ![NeRF Garden](./nerf_garden.gif)
+
 
 ### [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon)
 The Blender addon we developed in-house to produce the dataset images is also made available publicly.
