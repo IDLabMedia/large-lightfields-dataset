@@ -32,13 +32,13 @@ We present two scenes: _barbershop_ and _garden_.
 
 ### Barbershop
 
-![Barbershop Panorama](barbershop_pano.webp)
+![Barbershop Panorama](/docs/barbershop_pano.webp)
 
 This scene is taken from the Blender website, under the "demo files" section. It is licensed CC-BY.
 
 ### Garden
 
-![Garden Panorama](garden_pano.webp)
+![Garden Panorama](/docs/garden_pano.webp)
 
 This scene is made in-house by IDLab-MEDIA. It is licensed CC-BY.
 
