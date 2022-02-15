@@ -1,4 +1,4 @@
-# [Large Lightfields Dataset](https://idlabmedia.github.io/large-lightfield-dataset)
+# [Large Lightfields Dataset](https://idlabmedia.github.io/large-lightfields-dataset)
 
 We present a dataset of light field images with the aim for providing a useful
 dataset for immersive VR experiences. 
@@ -70,3 +70,17 @@ The Blender addon we developed in-house to produce the dataset images is also ma
 <img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser.PNG"  height="210"/> <img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser2.png"  height="210"/>
 
 ![Addon GIF](https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/settings.gif)
+
+## Credits
+
+To cite this paper:
+
+```bibtex
+@online{
+ title={{Large Lightfields Datasets}},
+ author={{}},
+ year=2022,
+}
+```
+
+Dataset and paper by [IDLab MEDIA](https://media.idlab.ugent.be/).
