@@ -1,7 +1,7 @@
-# [Large Lightfields Dataset](https://idlabmedia.github.io/large-lightfields-dataset)
+# [SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset](https://idlabmedia.github.io/large-lightfields-dataset)
 
 We present a dataset of light field images with the aim for providing a useful
-dataset for immersive VR experiences. 
+dataset for immersive VR experiences.
 
 ## Properties
 Our dataset exhibits the following properties:
@@ -15,6 +15,9 @@ Our dataset exhibits the following properties:
  - **large field of view**: In order to maximize the _interpolation volume_
    (a.k.a: the walkable volume of light), the images are rendered using fisheye
    lenses with a field of view of 180°.
+ - **immersive**: Thanks to the large field of view and positioning of the
+   viewpoints has every point within the interpolation volume a full panoramic
+   field of view of light information available.
  - **realism**: The selected scenes have reasonable realism.
  - **depth maps**: As the images are computer-genereted renders, we provide
    depth maps for every image.
@@ -28,22 +31,32 @@ Our dataset exhibits the following properties:
 
 ## Scenes
 
-We present two scenes: _barbershop_ and _garden_.
+We present three scenes: _Agent 327: Barbershop_, _Zen Garden_, and _Lone Monk_.
 
-### Barbershop
+### Agent 327: Barbershop
 
 ![Barbershop Panorama](./barbershop_pano.webp)
 
 This scene is taken from [the Blender website, under the "demo files"
 section](https://www.blender.org/download/demo-files/#cycles). It is licensed
-CC-BY.
+CC-BY, by [Blender Foundation](https://studio.blender.org).
 
-### Garden
+### Zen Garden
 
-![Garden Panorama](./garden_pano.webp)
+![Zen Garden Panorama](./garden_pano.webp)
 
-This scene is made in-house by IDLab-MEDIA. It is licensed [CC-BY
-4.0](https://creativecommons.org/licenses/by/4.0/).
+This scene is made in-house by IDLab-MEDIA. It is licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+### Lone Monk
+
+![Lone Monk Panorama](./lone_monk_pano.webp)
+
+This scene is made by Carlo Bergonzini from [Monorender](http://www.monorender.com/), licensed CC-BY.
+This scene is also available for download from [the Blender website, under the "demo files"
+section](https://www.blender.org/download/demo-files/#cycles).
+Applied modifications:
+ - Added roof geometry above the section with the chair.
+ - Solidify modifier on the roof tiles.
 
 ## Tools
 
@@ -62,6 +75,7 @@ support rectilinear images):
 
 ![NeRF Barbershop](./nerf_barbershop_spherical.gif)
 ![NeRF Garden](./nerf_garden.gif)
+![NeRF Lone Monk](./nerf_lone_monk.gif)
 
 
 ### [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon)
@@ -77,7 +91,7 @@ To cite this paper:
 
 ```bibtex
 @online{
- title={{Large Lightfields Datasets}},
+ title={{SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset}},
  author={{}},
  year=2022,
 }
