@@ -58,6 +58,25 @@ Applied modifications:
  - Added roof geometry above the section with the chair.
  - Solidify modifier on the roof tiles.
 
+## Download
+
+
+ - Barbershop
+   - barbershop_LFCuboid_1mx3mx1m.tar       (16G  )
+   - barbershop_LFSphere_e105cm_d145cm.tar  (7,5G )
+   - barbershop_LFSphere_e110cm_d100cm.tar  (43M  )
+   - barbershop_LFCuboid_8panos.tar         (172M )
+ - Garden
+   - garden_LFCuboid_2x2x1.tar         (25G  )
+   - garden_LFSphere_e100cm_d170cm.tar (8,7G )
+   - garden_LFSphere_e100cm_d50cm.tar  (51M  )
+   - garden_LFCuboid_8panos.tar        (86M  )
+ - Lone Monk
+   - lone_monk_LFCuboid_4mx4mx3m.tar      (24G  )
+   - lone_monk_LFSphere_e220cm_d400cm.tar (6,8G )
+   - lone_monk_LFSphere_e160cm_d220cm.tar (500M )
+   - lone_monk_LFCuboid_8panos.tar        (159M )
+
 ## Tools
 
 ### [Lens Reproject](https://github.com/IDLabMEDIA/image-lens-reproject)

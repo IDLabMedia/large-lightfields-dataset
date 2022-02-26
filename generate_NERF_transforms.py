@@ -8,11 +8,11 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("--dataset-config", type=str, required=True, help="dataset config file (i.e.: the 'lightfield.cfg' file).")
 parser.add_argument("--subdir", type=str, required=False, help="path prefix to include in the filename paths")
-parser.add_argument("--output-dir-config", type=str, required=True, help="directory to output the JSON config file.")
-parser.add_argument("--scene", type=str, choices=["garden", "barbershop","kitchen"], help="A specific scene name that will be used to pick sane scaling/aabb defaults.")
+parser.add_argument("--output-transforms", type=str, required=True, help="path to the transforms.json to produce.")
+parser.add_argument("--scene", type=str,
+        choices=["garden", "barbershop", "lone_monk", "kitchen"],
+        help="A specific scene name that will be used to pick sane scaling/aabb defaults.")
 args = parser.parse_args()
-
-camera_parameters_file = os.path.join(args.output_dir_config, "transforms.json")
 
 names = []
 positions = [] # camera positions in 3-tuples
@@ -135,6 +135,11 @@ elif args.scene == "garden":
     transforms_config.update({
         "scale": 0.24
     })
+elif args.scene == "lone_monk":
+    transforms_config.update({
+        "scale": 0.03,
+        "offset": [0.35, 0.5, 0.2]
+    })
 elif args.scene == "kitchen":
     transforms_config.update({
     "scale": 0.2,
@@ -150,5 +155,5 @@ transforms_config.update({
     })
 
 
-with open(camera_parameters_file, "w") as outfile:
+with open(args.output_transforms, "w") as outfile:
     json.dump(transforms_config, outfile, indent=4)
