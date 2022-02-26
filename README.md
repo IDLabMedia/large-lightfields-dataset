@@ -1,7 +1,8 @@
 # [SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset](https://idlabmedia.github.io/large-lightfields-dataset)
 
-We present a dataset of light field images with the aim for providing a useful
-dataset for immersive VR experiences.
+We present a dataset _SILVR_ of light field images for six-degrees-of-freedom
+navigation in large fully-immersive volumes. The _SILVR_ dataset is short for
+_"**S**ynthetic **I**mmersive **L**arge-**V**olume **R**ay"_ dataset.
 
 ## Properties
 Our dataset exhibits the following properties:
@@ -41,22 +42,31 @@ This scene is taken from [the Blender website, under the "demo files"
 section](https://www.blender.org/download/demo-files/#cycles). It is licensed
 CC-BY, by [Blender Foundation](https://studio.blender.org).
 
+Download the original _Agent 327: Barbershop_ scene **with light field camera setups** [here (272MB)](https://cloud.ilabt.imec.be/index.php/s/anFWqc5TwW646Ex).
+Note that our [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon) is required to open the Blender file with light fields.
+
 ### Zen Garden
 
 ![Zen Garden Panorama](./garden_pano.webp)
 
 This scene is made in-house by IDLab-MEDIA. It is licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
+Download the _Zen Garden_ scene **with light field camera setups** [here (231MB)](https://cloud.ilabt.imec.be/index.php/s/TTBDMbSziDgFyR7).
+Note that our [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon) is required to open the Blender file with light fields.
+
 ### Lone Monk
 
 ![Lone Monk Panorama](./lone_monk_pano.webp)
 
 This scene is made by Carlo Bergonzini from [Monorender](http://www.monorender.com/), licensed CC-BY.
-This scene is also available for download from [the Blender website, under the "demo files"
+The original scene is also available for download from [the Blender website, under the "demo files"
 section](https://www.blender.org/download/demo-files/#cycles).
 Applied modifications:
  - Added roof geometry above the section with the chair.
  - Solidify modifier on the roof tiles.
+
+Download the modified _Lone Monk_ scene **with light field camera setups** [here (33MB)](https://cloud.ilabt.imec.be/index.php/s/wTwwPyD8pp4CQkp).
+Note that our [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon) is required to open the Blender file with light fields.
 
 ## Download
 
@@ -65,20 +75,20 @@ All files can be downloaded individually. Below you can find an overview of the 
 
 ```
  - Barbershop
-   - barbershop_LFCuboid_1mx3mx1m.tar       (16    G)
-   - barbershop_LFSphere_e105cm_d145cm.tar  ( 7.5  G)
-   - barbershop_LFSphere_e110cm_d100cm.tar  (    43M)
-   - barbershop_LFCuboid_8panos.tar         (   172M)
+   - barbershop_LFCuboid_1mx3mx1m.tar       (16    GB)
+   - barbershop_LFSphere_e105cm_d145cm.tar  ( 7.5  GB)
+   - barbershop_LFSphere_e110cm_d100cm.tar  (    43MB)
+   - barbershop_LFCuboid_8panos.tar         (   172MB)
  - Garden
-   - garden_LFCuboid_2x2x1.tar              (25    G)
-   - garden_LFSphere_e100cm_d170cm.tar      ( 8.7  G)
-   - garden_LFSphere_e100cm_d50cm.tar       (    51M)
-   - garden_LFCuboid_8panos.tar             (    86M)
+   - garden_LFCuboid_2x2x1.tar              (25    GB)
+   - garden_LFSphere_e100cm_d170cm.tar      ( 8.7  GB)
+   - garden_LFSphere_e100cm_d50cm.tar       (    51MB)
+   - garden_LFCuboid_8panos.tar             (    86MB)
  - Lone Monk
-   - lone_monk_LFCuboid_4mx4mx3m.tar        (24    G)
-   - lone_monk_LFSphere_e220cm_d400cm.tar   ( 6.8  G)
-   - lone_monk_LFSphere_e160cm_d220cm.tar   (   500M)
-   - lone_monk_LFCuboid_8panos.tar          (   159M)
+   - lone_monk_LFCuboid_4mx4mx3m.tar        (24    GB)
+   - lone_monk_LFSphere_e220cm_d400cm.tar   ( 6.8  GB)
+   - lone_monk_LFSphere_e160cm_d220cm.tar   (   500MB)
+   - lone_monk_LFCuboid_8panos.tar          (   159MB)
 ```
 
 Find the sha256 checksums [here](./sha256sums.txt).
