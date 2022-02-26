@@ -32,7 +32,7 @@ Our dataset exhibits the following properties:
 
 ## Scenes
 
-We present three scenes: _Agent 327: Barbershop_, _Zen Garden_, and _Lone Monk_.
+We present light field renders with various camera setup configurations for three scenes: _Agent 327: Barbershop_, _Zen Garden_, and _Lone Monk_.
 
 ### Agent 327: Barbershop
 
@@ -92,6 +92,7 @@ All files can be downloaded individually. Below you can find an overview of the 
 ```
 
 Find the sha256 checksums [here](./sha256sums.txt).
+The letters `e` and `d` in the filenames are for 'elevation' and 'diameter'.
 
 ## Tools
 
