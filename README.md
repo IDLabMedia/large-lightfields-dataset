@@ -125,11 +125,11 @@ The Blender addon we developed in-house to produce the dataset images is also ma
 
 To cite this paper:
 
-```bibtex
+```
 @online{
  title={{SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset}},
- author={{}},
- year=2022,
+ author={Courteaux, Martijn and Artois, Julie and De Pauw, Stijn and Lambert, Peter and Van Wallendael, Glenn},
+ year=2022
 }
 ```
 
