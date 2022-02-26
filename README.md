@@ -127,7 +127,7 @@ To cite this paper:
 
 ```
 @online{
- title={{SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset}},
+ title={SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset},
  author={Courteaux, Martijn and Artois, Julie and De Pauw, Stijn and Lambert, Peter and Van Wallendael, Glenn},
  year=2022
 }
