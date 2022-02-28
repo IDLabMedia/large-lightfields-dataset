@@ -1,6 +1,6 @@
 # [SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset](https://idlabmedia.github.io/large-lightfields-dataset)
 
-We present a dataset _SILVR_ of light field images for six-degrees-of-freedom
+We present _SILVR_, a dataset of light field images for six-degrees-of-freedom
 navigation in large fully-immersive volumes. The _SILVR_ dataset is short for
 _"**S**ynthetic **I**mmersive **L**arge-**V**olume **R**ay"_ dataset.
 
@@ -11,20 +11,20 @@ Our dataset exhibits the following properties:
    perfect and do not need any calibration. Camera positions and lens
    configurations are known exactly and provided in the corresponding JSON
    files.
- - **large interpolation volume**: The used camera configurations span a
-   relative large volume (a couple of meters in diameter).
+ - **large interpolation volume**: The camera configurations span a
+   relatively large volume (a couple of meters in diameter).
  - **large field of view**: In order to maximize the _interpolation volume_
    (a.k.a: the walkable volume of light), the images are rendered using fisheye
    lenses with a field of view of 180°.
  - **immersive**: Thanks to the large field of view and positioning of the
-   viewpoints has every point within the interpolation volume a full panoramic
+   viewpoints, every point within the interpolation volume has a full panoramic
    field of view of light information available.
  - **realism**: The selected scenes have reasonable realism.
- - **depth maps**: As the images are computer-genereted renders, we provide
+ - **depth maps**: As the images are computer-generated renders, we provide
    depth maps for every image.
- - **specularities** and **reflections**: The scenes exhibit some speculars or
-   reflections, including mirrors. Reflections and mirrors always have the
-   depth of the surface, and not apparent depth of the reflections.
+ - **specularities** and **reflections**: The scenes exhibit some specularities
+   or reflections, including mirrors. Reflections and mirrors always have the
+   depth of the surface, and not the apparent depth of the reflections.
  - **volumetrics**: Some volumetrics are also present (fire, smoke, fog) in the
    `garden` scene.
  - **densly rendered**: The camera setup is rather dense (around 10cm spacing
@@ -99,23 +99,53 @@ The letters `e` and `d` in the filenames are for 'elevation' and 'diameter'.
 ### [Lens Reproject](https://github.com/IDLabMEDIA/image-lens-reproject)
 As the images are rendered using equisolid fish-eye lenses, we also supply a
 tool (written in C++) to generate reprojected images with other lens types, as
-most established light field research uses rectilinear lenses.
+most established light field research assumes rectilinear lenses. The tool can
+be found [here](https://github.com/IDLabMEDIA/image-lens-reproject)
 
 ### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/blob/main/generate_NERF_transforms.py)
 We provide a Python script that produces the required NeRF configuration to
 test our scenes in NeRF using [instant-ngp](https://github.com/NVlabs/instant-ngp).
 
-Example on the spherical rendering configuration of barbershop and garden,
-after reprojecting it using the `lens-reproject` tool (as instant-ngp only
-support rectilinear images):
+Example on the spherical rendering configuration of _barbershop_, _lone monk_
+and _garden_, after reprojecting it using the `lens-reproject` tool (as
+instant-ngp only support rectilinear images):
 
 ![NeRF Barbershop](./nerf_barbershop_spherical.gif)
 ![NeRF Garden](./nerf_garden.gif)
 ![NeRF Lone Monk](./nerf_lone_monk.gif)
 
+#### NeRF: How to?
+First, we reproject the images (in this example from the scene _lone monk_)
+with a rectilinear lens of 18mm focal length on a 36mm sensor, and store them
+in PNG format with a resolution 1/8th of the original images (i.e.: 256x256),
+while reducing exposure by one stop and applying Reinhard tone mapping with
+maximum brightness 5:
+```sh
+mkdir lone_monk_perspective
+./reproject --parallel 4 --rectilinear 18,36 --scale 0.125 \
+  --png --exposure -1 --reinhard 5 \
+  --input-dir lone_monk/LFSphere_e220cm_d400cm/exr \
+  --input-cfg lone_monk/LFSphere_e220cm_d400cm/lightfield.json \
+  --output-dir lone_monk_perspective \
+  --output-cfg lone_monk_perspective/lightfield.json
+```
+Now, we generate the `transforms.json` required by instant-ngp:
+```sh
+python3 generate_NERF_transforms.py \
+  --scene lone_monk \
+  --dataset-config lone_monk_perspective/lightfield.json \
+  --output-transforms lone_monk_perspective/transforms.json
+```
+Finally, open the dataset with with instant-ngp:
+```sh
+cd instant-ngp
+build/testbed --scene=path/to/lone_monk_perspective/transforms.json
+```
 
 ### [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon)
-The Blender addon we developed in-house to produce the dataset images is also made available publicly.
+[The Blender addon](https://github.com/IDLabMEDIA/blender-lightfield-addon) we
+developed in-house to produce the dataset images is also made available
+publicly [here](https://github.com/IDLabMEDIA/blender-lightfield-addon).
 
 <img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser.PNG"  height="210"/> <img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser2.png"  height="210"/>
 
@@ -125,12 +155,14 @@ The Blender addon we developed in-house to produce the dataset images is also ma
 
 To cite this paper:
 
+<!-- {% raw %} -->
 ```bibtex
 @online{
- title={SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset},
+ title={{SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset}},
  author={Courteaux, Martijn and Artois, Julie and De Pauw, Stijn and Lambert, Peter and Van Wallendael, Glenn},
  year=2022
 }
 ```
+<!-- {% endraw %} -->
 
 Dataset and paper by [IDLab MEDIA](https://media.idlab.ugent.be/).
