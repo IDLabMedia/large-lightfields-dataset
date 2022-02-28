@@ -100,11 +100,13 @@ The letters `e` and `d` in the filenames are for 'elevation' and 'diameter'.
 As the images are rendered using equisolid fish-eye lenses, we also supply a
 tool (written in C++) to generate reprojected images with other lens types, as
 most established light field research assumes rectilinear lenses. The tool can
-be found [here](https://github.com/IDLabMEDIA/image-lens-reproject)
+be found [here](https://github.com/IDLabMEDIA/image-lens-reproject).
 
 ### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/blob/main/generate_NERF_transforms.py)
-We provide a Python script that produces the required NeRF configuration to
-test our scenes in NeRF using [instant-ngp](https://github.com/NVlabs/instant-ngp).
+We provide a Python script
+[`generate_NERF_transforms.py`](https://github.com/IDLabMEDIA/large-lightfield-dataset/blob/main/generate_NERF_transforms.py)
+that produces the required NeRF configuration to test our scenes in NeRF using
+[instant-ngp](https://github.com/NVlabs/instant-ngp).
 
 Example on the spherical rendering configuration of _barbershop_, _lone monk_
 and _garden_, after reprojecting it using the `lens-reproject` tool (as
