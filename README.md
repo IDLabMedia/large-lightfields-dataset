@@ -1,4 +1,15 @@
+<div class="thumbnails in-body">
+<a href="https://arxiv.org/abs/2204.09523">
+<img src="https://raw.githubusercontent.com/IDLabMedia/large-lightfields-dataset/main/thumbnails/page-1.png" alt="page1" width="16%" />
+<img src="https://raw.githubusercontent.com/IDLabMedia/large-lightfields-dataset/main/thumbnails/page-2.png" alt="page2" width="16%" />
+<img src="https://raw.githubusercontent.com/IDLabMedia/large-lightfields-dataset/main/thumbnails/page-3.png" alt="page3" width="16%" />
+<img src="https://raw.githubusercontent.com/IDLabMedia/large-lightfields-dataset/main/thumbnails/page-4.png" alt="page4" width="16%" />
+<img src="https://raw.githubusercontent.com/IDLabMedia/large-lightfields-dataset/main/thumbnails/page-5.png" alt="page5" width="16%" />
+<img src="https://raw.githubusercontent.com/IDLabMedia/large-lightfields-dataset/main/thumbnails/page-6.png" alt="page6" width="16%" />
+</a>
+
 # [SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset](https://idlabmedia.github.io/large-lightfields-dataset)
+</div>
 
 We present _SILVR_, a dataset of light field images for six-degrees-of-freedom
 navigation in large fully-immersive volumes. The _SILVR_ dataset is short for
@@ -70,6 +81,7 @@ Note that our [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-l
 
 ## Download
 
+All images are provided in OpenEXR format with HDR colors and depth in meters.
 Files are available for download from our own [storage service](https://cloud.ilabt.imec.be/index.php/s/KHWopdXmT3Dxo5P).
 All files can be downloaded individually. Below you can find an overview of the different files and their sizes.
 
@@ -96,25 +108,26 @@ The letters `e` and `d` in the filenames are for 'elevation' and 'diameter'.
 
 ## Tools
 
-### [Lens Reproject](https://github.com/IDLabMEDIA/image-lens-reproject)
+### Lens Reproject
 As the images are rendered using equisolid fish-eye lenses, we also supply a
 tool (written in C++) to generate reprojected images with other lens types, as
-most established light field research assumes rectilinear lenses. The tool can
-be found [here](https://github.com/IDLabMEDIA/image-lens-reproject).
+most established light field research assumes rectilinear lenses.
 
-### [NeRF configuration generator](https://github.com/IDLabMEDIA/large-lightfield-dataset/blob/main/generate_NERF_transforms.py)
+**Project page:** [github.com/IDLabMEDIA/image-lens-reproject](https://github.com/IDLabMEDIA/image-lens-reproject)  
+
+### NeRF configuration generator
 We provide a Python script
 [`generate_NERF_transforms.py`](https://github.com/IDLabMEDIA/large-lightfield-dataset/blob/main/generate_NERF_transforms.py)
 that produces the required NeRF configuration to test our scenes in NeRF using
 [instant-ngp](https://github.com/NVlabs/instant-ngp).
 
+**Script source:** [github.com/IDLabMEDIA/large-lightfield-dataset/generate_NERF_transforms.py](https://github.com/IDLabMEDIA/large-lightfield-dataset/blob/main/generate_NERF_transforms.py)  
+
 Example on the spherical rendering configuration of _barbershop_, _lone monk_
 and _garden_, after reprojecting it using the `lens-reproject` tool (as
 instant-ngp only support rectilinear images):
 
-![NeRF Barbershop](./nerf_barbershop_spherical.gif)
-![NeRF Garden](./nerf_garden.gif)
-![NeRF Lone Monk](./nerf_lone_monk.gif)
+<img alt="NeRF Barbershop" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_barbershop_spherical.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' /><img alt="NeRF Zen Garden" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_garden.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' /><img alt="NeRF Lone Monk" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_lone_monk.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />
 
 #### NeRF: How to?
 First, we reproject the images (in this example from the scene _lone monk_)
@@ -144,10 +157,12 @@ cd instant-ngp
 build/testbed --scene=path/to/lone_monk_perspective/transforms.json
 ```
 
-### [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon)
+### Blender Lightfield Addon
 [The Blender addon](https://github.com/IDLabMEDIA/blender-lightfield-addon) we
-developed in-house to produce the dataset images is also made available
-publicly [here](https://github.com/IDLabMEDIA/blender-lightfield-addon).
+developed in-house to produce the dataset images is also open-sourced to enable
+anyone to start producing light field datasets from virtual scenes in Blender.
+
+**Project page:** [github.com/IDLabMEDIA/blender-lightfield-addon](https://github.com/IDLabMEDIA/blender-lightfield-addon)  
 
 <img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser.PNG"  height="210"/> <img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser2.png"  height="210"/>
 

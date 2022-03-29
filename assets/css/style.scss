@@ -1,0 +1,15 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+div.thumbnails a {
+    text-decoration: none;
+}
+div.thumbnails img {
+    max-width: 340px;
+    width: 10%;
+}
+div.thumbnails.in-body {
+    display: none;
+}
