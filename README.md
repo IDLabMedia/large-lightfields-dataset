@@ -159,10 +159,19 @@ To cite this paper:
 
 <!-- {% raw %} -->
 ```bibtex
-@online{
- title={{SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset}},
- author={Courteaux, Martijn and Artois, Julie and De Pauw, Stijn and Lambert, Peter and Van Wallendael, Glenn},
- year=2022
+@inproceedings{
+ title = {{SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset}},
+ author = {Courteaux, Martijn and Artois, Julie and De Pauw, Stijn and Lambert, Peter and Van Wallendael, Glenn},
+ year = {2022},
+ doi = {10.1145/3524273.3532890},
+ publisher = {Association for Computing Machinery},
+ url = {https://doi.org/10.1145/3524273.3532890},
+ address = {New York, NY, USA},
+ month = {jun},
+ numpages = {6},
+ isbn = {978-1-4503-9283-9/22/06},
+ booktitle = {13th ACM Multimedia Systems Conference (MMSys '22)},
+ location = {Athlone, Ireland}
 }
 ```
 <!-- {% endraw %} -->
