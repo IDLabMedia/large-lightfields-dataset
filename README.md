@@ -164,7 +164,7 @@ anyone to start producing light field datasets from virtual scenes in Blender.
 
 **Project page:** [github.com/IDLabMEDIA/blender-lightfield-addon](https://github.com/IDLabMEDIA/blender-lightfield-addon)  
 
-<img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser.PNG"  height="210"/> <img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser2.png"  height="210"/>
+<img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser.png"  height="210"/> <img src="https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/teaser2.png"  height="210"/>
 
 ![Addon GIF](https://github.com/IDLabMedia/blender-lightfield-addon/raw/main/docs/settings.gif)
 
