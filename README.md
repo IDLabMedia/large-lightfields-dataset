@@ -10,6 +10,7 @@
 
 # [SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset](https://idlabmedia.github.io/large-lightfields-dataset)
 </div>
+
 [![GitHub stars](https://img.shields.io/github/stars/IDLabMedia/large-lightfields-dataset)](https://github.com/IDLabMedia/large-lightfields-dataset/stargazers) [![Papers With Code](https://img.shields.io/static/v1?label=Papers%20With%20Code&message=Dataset&color=09b)](https://paperswithcode.com/dataset/silvr) [![Papers With Code](https://img.shields.io/static/v1?label=Papers%20With%20Code&message=Paper&color=09b)](https://cs.paperswithcode.com/paper/silvr-a-synthetic-immersive-large-volume) [![arXiv](https://img.shields.io/static/v1?label=ariXiv&message=SILVR&color=brightgreen)](https://arxiv.org/abs/2204.09523)
 
 We present _SILVR_, a dataset of light field images for six-degrees-of-freedom
