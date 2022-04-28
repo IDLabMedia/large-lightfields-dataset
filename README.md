@@ -158,6 +158,8 @@ Finally, open the dataset with with instant-ngp:
 cd instant-ngp
 build/testbed --scene=path/to/lone_monk_perspective/transforms.json
 ```
+Here, make sure to set the _"Near distance"_ under the _Training_ options to 0.
+Consider restarting training after you did.
 
 ### Blender Lightfield Addon
 [The Blender addon](https://github.com/IDLabMEDIA/blender-lightfield-addon) we
