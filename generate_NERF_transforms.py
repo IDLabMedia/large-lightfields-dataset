@@ -92,7 +92,7 @@ def generate_transform_matrix(pos, rot):
     xf_rot[:3,:3] = R
 
     xf_pos = np.eye(4)
-    xf_pos[:3,3] = pos - average_position
+    xf_pos[:3,3] = pos # - average_position
 
     # barbershop_mirros_hd_dense:
     # - camera plane is y+z plane, meaning: constant x-values
@@ -116,6 +116,9 @@ def generate_transform_matrix(pos, rot):
     return xf
 
 
+average_position_transformed = np.transpose(np.mean([generate_transform_matrix(positions[i], [0,0,0])[:3,3] for i in range(len(names))], axis=0))
+print("Average position transformed: ", average_position_transformed)
+
 frames = [{
     "file_path": names[i] if args.subdir is None else os.path.join(args.subdir, names[i]),
     "transform_matrix": generate_transform_matrix(positions[i], rotations[i]).tolist(),
@@ -124,6 +127,7 @@ frames = [{
 transforms_config = {
     "camera_angle_x": camera_angle_x,
     "scale": 0.2,
+    "offset": [0.5, 0.5, 0.5],
 }
 
 if args.scene == "barbershop":
@@ -133,7 +137,8 @@ if args.scene == "barbershop":
     })
 elif args.scene == "garden":
     transforms_config.update({
-        "scale": 0.24
+        "scale": 0.1,
+        "offset": [0.5, 0.5, 0.2],
     })
 elif args.scene == "lone_monk":
     transforms_config.update({
@@ -145,6 +150,8 @@ elif args.scene == "kitchen":
     "scale": 0.2,
     "offset": [0.2, 0.25, 0.5],
     })
+
+transforms_config["offset"] = (np.array(transforms_config["offset"]) - transforms_config["scale"] * average_position_transformed).tolist()[0]
 
 print()
 print("Generating config:")
