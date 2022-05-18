@@ -12,6 +12,12 @@ parser.add_argument("--output-transforms", type=str, required=True, help="path t
 parser.add_argument("--scene", type=str,
         choices=["garden", "barbershop", "lone_monk", "kitchen"],
         help="A specific scene name that will be used to pick sane scaling/aabb defaults.")
+parser.add_argument("--scale", type=float,
+        help="A scale for NeRF to fit the unit cube.")
+parser.add_argument("--extra-offset", type=float, nargs=3,
+        help="A 3-vector that defines extra offset in NeRF coordinates")
+parser.add_argument("--render-aabb", type=float, nargs=6,
+        help="Two 3-vectors that define the AABB min and max in NeRF coordinates")
 args = parser.parse_args()
 
 names = []
@@ -151,7 +157,20 @@ elif args.scene == "kitchen":
     "offset": [0.2, 0.25, 0.5],
     })
 
-transforms_config["offset"] = (np.array(transforms_config["offset"]) - transforms_config["scale"] * average_position_transformed).tolist()[0]
+if args.scale is not None:
+    print("Overriding scale:", args.scale)
+    transforms_config["scale"] = args.scale
+
+offset = np.array(transforms_config["offset"]).squeeze()
+offset -= transforms_config["scale"] * average_position_transformed.squeeze()
+if args.extra_offset is not None:
+    print("Apply extra offset:", args.extra_offset)
+    offset += np.array(args.extra_offset)
+
+transforms_config["offset"] = offset.tolist()
+
+if args.render_aabb:
+    transforms_config["render_aabb"] = [args.render_aabb[:3], args.render_aabb[3:]]
 
 print()
 print("Generating config:")
