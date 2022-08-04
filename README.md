@@ -129,7 +129,7 @@ Example on the spherical rendering configuration of _barbershop_, _lone monk_
 and _garden_, after reprojecting it using the `lens-reproject` tool (as
 instant-ngp only support rectilinear images):
 
-<img alt="NeRF Barbershop" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_barbershop_spherical.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' /> <img alt="NeRF Zen Garden" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_garden.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' /> <img alt="NeRF Lone Monk" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_lone_monk.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />
+<img alt="NeRF Barbershop" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_barbershop_spherical.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />&nbps;<img alt="NeRF Zen Garden" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_garden.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />&nbps;<img alt="NeRF Lone Monk" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_lone_monk.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />
 
 #### NeRF: How to?
 First, we reproject the images (in this example from the scene _lone monk_)
@@ -178,7 +178,7 @@ To cite this paper:
 
 <!-- {% raw %} -->
 ```bibtex
-@inproceedings{
+@inproceedings{courteaux2022silvr,
  title = {{SILVR: A Synthetic Immersive Large-Volume Plenoptic Dataset}},
  author = {Courteaux, Martijn and Artois, Julie and De Pauw, Stijn and Lambert, Peter and Van Wallendael, Glenn},
  year = {2022},
