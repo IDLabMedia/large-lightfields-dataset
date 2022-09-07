@@ -108,8 +108,8 @@ All files can be downloaded individually. Below you can find an overview of the 
 Find the sha256 checksums [here](./sha256sums.txt).
 The letters `e` and `d` in the filenames are for 'elevation' and 'diameter'.
 
-**Update 2022-09-07**: Reuploaded `garden_LFCuboid_2x2x1.tar` after fixing issue #3.
-**Update 2022-09-07**: Reuploaded `garden_mmsys2022.blend` after fixing issue #4.
+**Update 2022-09-07**: Reuploaded `garden_LFCuboid_2x2x1.tar` after fixing issue #3.  
+**Update 2022-09-07**: Reuploaded `garden_mmsys2022.blend` after fixing issue #4.  
 
 ## Tools
 
@@ -132,7 +132,7 @@ Example on the spherical rendering configuration of _barbershop_, _lone monk_
 and _garden_, after reprojecting it using the `lens-reproject` tool (as
 instant-ngp only support rectilinear images):
 
-<img alt="NeRF Barbershop" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_barbershop_spherical.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />&nbps;<img alt="NeRF Zen Garden" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_garden.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />&nbps;<img alt="NeRF Lone Monk" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_lone_monk.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />
+<img alt="NeRF Barbershop" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_barbershop_spherical.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />&nbsp;<img alt="NeRF Zen Garden" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_garden.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />&nbsp;<img alt="NeRF Lone Monk" src="https://github.com/IDLabMedia/large-lightfields-dataset/blob/main/nerf_lone_monk.gif?raw=true" style='width: 32%; max-width: 32%; height: 200px; object-fit: cover' />
 
 #### NeRF: How to?
 First, we reproject the images (in this example from the scene _lone monk_)
