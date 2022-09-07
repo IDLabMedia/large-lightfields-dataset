@@ -64,7 +64,7 @@ Note that our [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-l
 
 This scene is made in-house by IDLab-MEDIA. It is licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-Download the _Zen Garden_ scene **with light field camera setups** [here (231MB)](https://cloud.ilabt.imec.be/index.php/s/TTBDMbSziDgFyR7).
+Download the _Zen Garden_ scene **with light field camera setups** [here (231MB)](https://cloud.ilabt.imec.be/index.php/s/Moqz2e7mNs2AFcT).
 Note that our [Blender Lightfield Addon](https://github.com/IDLabMEDIA/blender-lightfield-addon) is required to open the Blender file with light fields.
 
 ### Lone Monk
@@ -107,6 +107,9 @@ All files can be downloaded individually. Below you can find an overview of the 
 
 Find the sha256 checksums [here](./sha256sums.txt).
 The letters `e` and `d` in the filenames are for 'elevation' and 'diameter'.
+
+**Update 2022-09-07**: Reuploaded `garden_LFCuboid_2x2x1.tar` after fixing issue #3.
+**Update 2022-09-07**: Reuploaded `garden_mmsys2022.blend` after fixing issue #4.
 
 ## Tools
 
